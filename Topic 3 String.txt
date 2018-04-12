@@ -1,0 +1,219 @@
+Topic 4 String 
+
+The String data type represents a sequence of characters
+
+
+String str3 = '''this is a multiline line string'''; 
+   String str4 = """this is a multiline line string"""; 
+   
+   print(str1);
+   print(str2); 
+   print(str3); 
+   print(str4);
+
+
+================String Propertie===============
+
+=================codeUnits==========
+
+
+1)   Syntax
+
+
+
+String.codeUnits
+
+
+void main() {
+
+ 
+   String str = "Hello"; 
+   print(str.codeUnits); 
+} 
+
+output 
+
+[72, 101, 108, 108, 111] 
+
+===================isEmpty==========
+
+
+
+2)	Syntax
+
+String.isEmpty
+
+void main() { 
+   String str = "Hello"; 
+   print(str.isEmpty); 
+} 
+output
+
+False
+
+
+
+=================length===========
+
+3)	Syntax
+
+String.length
+
+
+String str = "Hello All"; 
+   print("The length of the string is: ${str.length}"); 
+
+
+output
+9
+
+==================Methods & Description===============
+
+=====================toLowerCase()=======
+
+1)  Syntax
+
+String.toLowerCase()
+
+
+  String uStr = "ABC"; 
+   String lStr = "hello"; 
+   print(uStr.toLowerCase()); 
+   print(lStr.toLowerCase()); 
+
+
+=============String trim() ========
+
+String.trim()
+
+
+
+ String str1 = "hello"; 
+   String str2 = "hello world"; 
+   String str3 = "hello"; 
+   
+   print(str1.trim()); 
+   print(str2.trim()); 
+   print(str3.trim()); 
+
+output 
+
+hello 
+hello world 
+hello
+
+
+
+===============compareTo()=======
+
+
+2)  Syntax
+
+compareTo(String other)
+
+ String str1 = "A"; 
+   String str2 = "A"; 
+   String str3 = "B"; 
+   
+   print("str1.compareTo(str2): ${str1.compareTo(str2)}"); 
+   print("str1.compareTo(str3): ${str1.compareTo(str3)}"); 
+   print("str3.compareTo(str2): ${str3.compareTo(str2)}"); 
+
+
+
+
+str1.compareTo(str2): 0 
+str1.compareTo(str3): -1 
+str3.compareTo(str2): 1 
+
+
+
+==============replaceAll()========
+
+
+
+3)	Syntax
+
+String replaceAll(Pattern from, String replace)
+
+
+void main() { 
+   String str1 = "Hello World"; 
+   print("New String: ${str1.replaceAll('World','ALL')}"); 
+} 
+
+
+New String: Hello ALL 
+
+==============split()=======
+
+
+4)	Syntax
+
+split(Pattern pattern)
+ String str1 = "Today, is, Thursday"; 
+   print("New String: ${str1.split(',')}"); 
+
+
+==============Substring Method===========
+
+
+Syntax
+
+substring(int startIndex, [ int endIndex ])
+
+
+
+
+startIndex the index to start extracting from(inclusive).
+
+endIndex the index to stop extracting (exclusive)
+
+
+
+String str1 = "Hello World"; 
+   print("New String: ${str1.substring(6)}"); 
+   
+   // from index 6 to the last index 
+   print("New String: ${str1.substring(2,6)}"); 
+   
+   // from index 2 to the 6th index 
+
+
+New String: World 
+New String: llo 
+
+
+================toString========
+
+
+
+Syntax
+
+val.toString()
+
+
+int n = 12; 
+   var res = n.toString(); 
+   print("New String: ${res}");
+
+out put
+
+12
+
+
+============codeUnitAt========
+
+
+
+String.codeUnitAt(int index)
+
+
+
+var res = "Good Day"; 
+   print("Code Unit of index 0 (G): ${res.codeUnitAt(0)}");  
+
+
+
+Code Unit of index 0 (G): 71  
+
