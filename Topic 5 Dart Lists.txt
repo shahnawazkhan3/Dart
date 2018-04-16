@@ -1,0 +1,413 @@
+====================Lists====================
+
+
+A very commonly used collection in programming is an array. Dart represents arrays in the form of List objects. A List is simply an ordered group of objects
+
+
+1)	test_list is the identifier that references the collection
+
+
+
+Fixed Length List
+
+Growable List
+
+
+
+
+var list_name = new List(initial_size)
+
+
+lst_name[index] = value;
+
+
+
+  var lst = new List(3); 
+   lst[0] = 12; 
+   lst[1] = 13; 
+   lst[2] = 11; 
+   print(lst); 
+
+
+
+
+Growable List
+
+
+Declaring a List
+
+
+Initializing a List
+
+
+ var num_list = [1,2,3]; 
+   print(num_list); 
+
+[1, 2, 3]
+
+==============empty List() constructor.========
+
+
+ var lst = new List(); 
+   lst.add(12); 
+   lst.add(13); 
+   print(lst);
+
+
+
+
+================List Properties============
+================ListFirst Method
+=============
+
+
+
+1)	Syntax
+
+List.first
+
+
+void main() { 
+   var lst = new List(); 
+   lst.add(12); 
+   lst.add(13); 
+   print("The first element of the list is: ${lst.first}"); 
+}  
+
+
+
+The first element of the list is: 12
+
+
+
+================List isEmpty Method========
+
+
+
+2) 	Syntax
+
+List.isEmpty
+
+
+
+void main() { 
+   var lst = new List(); 
+   lst.add(12); 
+   lst.add(13); 
+   print(lst.isEmpty); 
+} 
+
+
+False  
+
+==============List.isNotEmpty Method========
+
+3)	Syntax
+
+List.isNotEmpty
+
+void main() { 
+   var lst = new List(); 
+   lst.add(12); 
+   lst.add(13); 
+   print(lst.isNotEmpty); 
+} 
+
+
+output
+
+true 
+
+================List.length Method=========
+
+
+4)	Syntax
+
+List.length
+
+
+   var lst = new List(); 
+   lst.add(12); 
+   lst.add(13); 
+   print("The length of the list is : ${lst.length}"); 
+} 
+
+The length of the list is : 2 
+
+
+
+==========List.last Method========
+
+5)Syntax
+
+List.last 
+
+void main() { 
+   var lst = new List(); 
+   lst.add(12); 
+   lst.add(13); 
+   print("The last element of the list is: ${lst.last}"); 
+}  
+
+
+===============List.reversed Method========
+
+6)	Syntax
+
+List.reversed 
+
+void main() { 
+   var lst = new List(); 
+   lst.add(12); 
+   lst.add(13); 
+   print("The list values in reverse order: ${lst.reversed}"); 
+} 
+
+
+The list values in reverse order: (13, 12) 
+
+
+
+================List.single Method===========
+
+
+7)	Syntax
+
+List.single 
+
+void main() { 
+   var lst = new List(); 
+   lst.add(12);
+   print("The list has only one element: ${lst.single}"); 
+} 
+
+output
+
+The list values in reverse order: (13, 12) 
+
+
+void main() { 
+   var lst = new List(); 
+   lst.add(12); 
+   lst.add(10); 
+   print(lst.single); 
+}
+
+======================================Lists (Basic Operations)==================
+
+==============Inserting Elements into a List============
+
+
+void main() { 
+   List l = [1,2,3]; 
+   l.add(12); 
+   print(l); 
+}
+
+
+[1, 2, 3, 12]
+
+============= List.addAll() f========
+
+
+void main() { 
+   List l = [1,2,3]; 
+   l.addAll([12,13]); 
+   print(l); 
+}
+
+
+OUTPUT
+[1, 2, 3, 12, 13]
+
+
+=================The List.addAll() function===============
+
+void main() { 
+   List l = [1,2,3]; 
+   l.addAll([12,13]); 
+   print(l); 
+} 
+
+OUTPUT
+
+
+1, 2, 3, 12, 13
+
+
+=================DART SUPPORT ==============
+
+
+List.insert(index,value) 
+List.insertAll(index, iterable_list_of _values)
+
+
+
+Syntax
+
+List.insert(index,value)  
+List.insertAll([Itearble])
+
+
+===========List.insert()
+
+
+
+void main() { 
+   List l = [1,2,3]; 
+   l.insert(0,4); 
+   print(l); 
+}
+
+OUTPUT
+
+[4, 1, 2, 3]
+
+
+==============List.insertAll()
+
+
+void main() { 
+   List l = [1,2,3]; 
+   l.insertAll(0,[120,130]); 
+   print(l); 
+}
+
+OUTPUT
+
+
+[120, 130, 1, 2, 3]
+
+
+====================Updating a list==========================
+
+Updating the index
+
+
+void main() { 
+   List l = [1, 2, 3,]; 
+   1[0] = 123;
+   print (1);
+}
+
+[123, 2, 3]
+
+=========List.replaceRange() function==========
+
+List.replaceRange(int start_index,int end_index,Iterable <items>)
+
+
+
+1)Start_index   an integer representing the index position to start replacing.
+
+2)End_index  an integer representing the index position to stop replacing.
+
+3)<items>  an iterable object that represents the updated values.
+
+
+
+
+
+void main() {
+   List l = [1, 2, 3,4,5,6,7,8,9];
+   print('The value of list before replacing ${l}');
+   
+   l.replaceRange(0,3,[11,23,24]);
+   print('The value of list after replacing the items between the range [0-3] is ${l}');
+}
+
+
+===========
+
+The value of list before replacing [1, 2, 3, 4, 5, 6, 7, 8, 9]
+The value of list after replacing the items between the range [0-3] is [11, 23, 24, 4, 5, 6, 7, 8, 9]
+
+
+
+=====================================Removing List items===============
+
+
+
+Removing List items
+
+
+1)	Syntax
+
+List.remove(Object value)
+
+void main() { 
+   List l = [1, 2, 3,4,5,6,7,8,9]; 
+   print('The value of list before removing the list element ${l}'); 
+   bool res = l.remove(1); 
+   print('The value of list after removing the list element ${l}'); 
+}
+
+
+The value of list before removing the list element [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+The value of list after removing the list element [2, 3, 4, 5, 6, 7, 8, 9] 
+
+==============List.removeAt()===========
+
+
+2)	Syntax
+List.removeAt(int index)
+
+
+void main() { 
+   List l = [1, 2, 3,4,5,6,7,8,9]; 
+   print('The value of list before removing the list element ${l}'); 
+   dynamic res = l.removeAt(1); 
+   print('The value of the element ${res}'); 
+   print('The value of list after removing the list element ${l}'); 
+} 
+
+
+The value of list before removing the list element [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+The value of the element 2 
+The value of list after removing the list element [1, 3, 4, 5, 6, 7, 8, 9] 
+
+=========================List.removeLast()=========
+
+
+void main() { 
+   List l = [1, 2, 3,4,5,6,7,8,9]; 
+   print('The value of list before removing the list element ${l}');  
+   dynamic res = l.removeLast(); 
+   print('The value of item popped ${res}'); 
+   print('The value of list after removing the list element ${l}'); 
+}
+
+
+The value of list before removing the list element [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+The value of item popped 9 
+The value of list after removing the list element [1, 2, 3, 4, 5, 6, 7, 8] 
+
+
+===================List.removeRange()===========
+
+
+List.removeRange(int start, int end)
+
+void main() { 
+   List l = [1, 2, 3,4,5,6,7,8,9]; 
+   print('The value of list before removing the list element ${l}'); 
+   l.removeRange(0,3); 
+   print('The value of list after removing the list 
+      element between the range 0-3 ${l}'); 
+}
+
+
+The value of list before removing the list element 
+   [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+The value of list after removing the list element 
+   between the range 0-3 [4, 5, 6, 7, 8, 9]
+
+
+
+
+
+
+
+
+
+
