@@ -1,0 +1,247 @@
+===================Map==============
+
+
+he Map object is a simple key/value pair.
+ Keys and values in a map may be of any type. A Map is a dynamic collection.
+
+var identifier = { key1:value1, key2:value2 [,…..,key_n:value_n] }
+
+
+===========Declaring a Map using a Map Constructor=======
+
+var identifier = new Map()
+
+map_name[key] = value
+
+void main() {
+ 
+   var details = {
+'Usrname':'tom',
+'Password':'pass@123'
+
+}; 
+   print(details); 
+
+
+CLASS TITTLE {
+HOME }
+}
+
+
+output:
+
+
+{Usrname: tom, Password: pass@123}
+
+
+
+ Adding Values to Map Literals at Runtime
+
+
+
+void main() { 
+   var details = {'Usrname':'tom','Password':'pass@123'}; 
+   details['Uid'] = 'U1oo1'; 
+   print(details); 
+}
+
+
+{Usrname: tom, Password: pass@123, Uid: U1oo1}
+
+
+========================Map Constructor===============
+
+
+ var details = new Map(); 
+   details['Usrname'] = 'admin'; 
+   details['Password'] = 'admin@123'; 
+   print(details);
+
+
+
+=================Map  Properties==========
+
+
+
+===============Keys=============
+
+
+
+Syntax
+
+Map.keys
+
+
+
+void main() { 
+   var details = {'Usrname':'tom','Password':'pass@123'}; 
+   print(details.keys); 
+}
+OUTPUT:
+
+(Usrname, Password)
+
+
+==================Values=============
+
+
+
+void main() { 
+   var details = {'Usrname':'tom','Password':'pass@123'}; 
+   print(details.values); 
+}
+
+
+
+OUTPUT
+
+
+(tom, pass@123)
+
+
+===========Property Length==========
+
+
+void main() {
+   var details = {'Usrname':'tom','Password':'pass@123'};
+   print(details.length);
+}
+
+
+OUTPUT
+
+
+2
+
+=================Property isEmpty===========
+
+
+
+void main() { 
+   var details = {'Usrname':'tom','Password':'pass@123'}; 
+   print(details.isEmpty); 
+   var hosts = {}; 
+   print(hosts.isEmpty); 
+}
+
+OUT PUT:
+
+
+
+false 
+true
+
+============
+
+void main() { 
+   var details = {'Usrname':'tom','Password':'pass@123'}; 
+   print(details.isNotEmpty); 
+   
+   var hosts = {}; 
+   print(hosts.isNotEmpty); 
+}
+
+
+
+true 
+false
+
+
+====================Map Functions============
+
+
+===================Map.addAll() Function==========
+
+
+Syntax
+
+Map.addAll(Map<K, V> other) 
+
+
+void main() { 
+   Map m = {'name':'Tom','Id':'E1001'}; 
+   print('Map :${m}'); 
+   
+   m.addAll({'dept':'HR','email':'tom@xyz.com'}); 
+   print('Map after adding  entries :${m}'); 
+}
+
+
+output:
+
+Map : {name: Tom, Id: E1001} 
+Map after adding entries : {name: Tom, Id: E1001, dept: HR, email: tom@xyz.com}
+
+
+==================Map.clear()=============
+
+
+Syntax
+
+Map.clear() 
+
+
+void main() { 
+   Map m = {'name':'Tom','Id':'E1001'}; 
+   print('Map :${m}'); 
+   
+   m.clear(); 
+   print('Map after invoking clear()  :${m}'); 
+}
+
+
+output:
+
+Map :{name: Tom, Id: E1001} 
+Map after invoking clear()  :{} 
+
+
+===================Map.remove()==============
+
+Map.remove(Object key)
+
+
+
+void main() { 
+   Map m = {'name':'Tom','Id':'E1001'}; 
+   print('Map :${m}'); 
+   
+   dynamic res = m.remove('name'); 
+   print('Value popped from the Map :${res}'); 
+}
+
+
+============output==========
+
+Map :{name: Tom, Id: E1001} 
+Value popped from the Map :Tom 
+
+
+===============Map.forEach()===========
+
+
+Syntax
+
+Map.forEach(void f(K key, V value));
+
+
+
+Parameters
+f(K key, V value)  Applies f to each key-value pair of the map.
+
+Calling f must not add or remove keys from the map
+
+
+void main() { 
+   var usrMap = {"name": "Tom", 'Email': 'tom@xyz.com'}; 
+   usrMap.forEach((k,v) => print('${k}: ${v}')); 
+}
+
+
+output:
+
+
+name: Tom 
+Email: tom@xyz.com 
+
+
